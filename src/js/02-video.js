@@ -10,15 +10,18 @@ const TIME_STORAGE_KEY = "videoplayer-current-time";
 player.on('timeupdate', throttle(onTimeUpdate, 1000));
 
 function onTimeUpdate(event) {
-    console.dir(event);
     localStorage.setItem(TIME_STORAGE_KEY, event.seconds);
-    return console.log("currentTime:", localStorage.getItem(TIME_STORAGE_KEY));
+    // return console.log("Current time:", localStorage.getItem(TIME_STORAGE_KEY));
+
+    // const durationTime = event.duration;
+//   if (currentTime === durationTime) {
+//     localStorage.removeItem(STORAGE_KEY);
+//   }
 
 }
 
-
 player.setCurrentTime(localStorage.getItem(TIME_STORAGE_KEY) || 0).then(function(seconds) {
-    console.log(seconds);
+console.log(seconds);
 }).catch(function(error) {
     switch (error.name) {
         case 'RangeError':

@@ -17,9 +17,9 @@ galleryEl.insertAdjacentHTML("beforeend", galleryItemsMarkup);
 
 
 new SimpleLightbox('.gallery a', {
-//   captions: 'true',  
-  captionsData: 'alt',
-    captionDelay: 250,
+   // captions: 'true',  
+   captionsData: 'alt',
+   captionDelay: 250,
     // nav: true,
     // navText: ['←','→'],
 });

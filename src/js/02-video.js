@@ -20,7 +20,9 @@ function onTimeUpdate(event) {
 
 }
 
-player.setCurrentTime(localStorage.getItem(TIME_STORAGE_KEY) || 0).then(function(seconds) {
+const currentTime = localStorage.getItem(TIME_STORAGE_KEY) || 0;
+
+player.setCurrentTime(currentTime).then(function(seconds) {
 console.log(seconds);
 }).catch(function(error) {
     switch (error.name) {

@@ -17,7 +17,7 @@ formEl.addEventListener('input', throttle(onInputChange, 500));
 
 getStorageData();
 
-function onInputChange() {
+  function onInputChange() {
 
     if (mailInput.value || messageInput.value) {
       formData.email = mailInput.value;
@@ -30,8 +30,9 @@ function onInputChange() {
   function getStorageData() {
     const storageData = localStorage.getItem(STORAGE_KEY);
     if (storageData) {
-      mailInput.value = (JSON.parse(storageData)).email || "";
-      messageInput.value = (JSON.parse(storageData)).message || "";
+      const parsedData = JSON.parse(storageData);
+      mailInput.value = parsedData.email ?? "";
+      messageInput.value = parsedData.message ?? "";
     }
   }
   

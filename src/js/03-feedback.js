@@ -52,20 +52,9 @@ getStorageData();
   
       evt.currentTarget.reset();
       localStorage.removeItem(STORAGE_KEY);
-      formData.email = "";
-      formData.message = "";
+      // formData.email = "";
+      // formData.message = "";
     }
-    // if (!mailInput.value || !messageInput.value) {
-    //   alert('Всі поля мають бути заповнені!');
-    // } else {
-    //   formData.email = mailInput.value;
-    //   formData.message = messageInput.value;
-    //   console.log(formData);
   
-    //   evt.target.reset();
-    //   localStorage.removeItem(STORAGE_KEY);
-    //   formData.email = "";
-    //   formData.message = "";
-    // }
   }
 
